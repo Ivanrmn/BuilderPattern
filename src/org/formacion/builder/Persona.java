@@ -29,7 +29,7 @@ public class Persona {
 			persona.edad = edad;
 			persona.lugarTrabajo = lugarTrabajo;
 			persona.colegio = null;
-			return this;
+			return BuilderMayor(persona);
 		}
 		
 		public Builder setMenor(int edad, String colegio) {
@@ -48,8 +48,28 @@ public class Persona {
 		    return ("Nombre:" + persona.nombre +
             "/n edad:" + persona.edad +
             "/n municipio:" + persona.municipio +
-            "/n colegio:" + persona.colegio);
+            "/n colegio:" + persona.colegio +
+                    "/n Lugar de trabajo:" + persona.lugarTrabajo);
         }
 	}
-	
+    public static class BuilderMayor {
+        private Persona adulto;
+
+        public BuilderMayor(String nombre){
+            Persona persona = new Persona();
+            persona.nombre = nombre;
+        }
+
+        public BuilderMayor(int edad) {
+            Persona persona = new Persona();
+
+        }
+
+
+    }
+
+    public class BuilderMenor {
+	    private Persona menor;
+
+    }
 }
