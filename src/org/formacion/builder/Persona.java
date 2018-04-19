@@ -43,7 +43,13 @@ public class Persona {
 		public Persona build() {
 			return persona;
 		}
-
+        @Override
+        public String toString(){
+		    return ("Nombre:" + persona.nombre +
+            "/n edad:" + persona.edad +
+            "/n municipio:" + persona.municipio +
+            "/n colegio:" + persona.colegio);
+        }
 	}
 	
 }
